@@ -18,11 +18,10 @@ body {
     position: relative;
     height: 100%;
     min-height: 500px;
-    padding-bottom: 20px;
 }
 
 .modal-overlay {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(129, 87, 189, 0.8);
     position: fixed;
     top: 0;
     left: 0;
@@ -33,23 +32,24 @@ body {
 
 .modal {
     position: relative;
-    width: 500px;
+    width: 60%;
     height: 300px;
     max-height: 90%;
-    min-width: 90%;
+    min-width: 60%;
     min-height: 380px;
     margin: 0 auto;
     background: #a382c2;
     top: 50%;
     transform: translateY(-50%);
     padding: 30px 10px;
+    border-radius: 20px;
 }
 
 .modal .winner {
     font-size: 80px;
     text-align: center;
     color: #c41f75;
-    text-shadow: 0px 3px 0 black;
+    text-shadow: 0px 3px 0 mediumpurple;
 }
 
 @media (max-width: 480px) {
@@ -59,21 +59,21 @@ body {
 }
 
 .modal .restart {
-    margin: 30px auto;
+    margin: 70px auto;
     padding: 20px 30px;
     display: block;
     font-size: 30px;
-    background: #4d4d4d;
-    background: linear-gradient( #4d4d4d, #222);
-    border: 1px solid #222;
+    background: #78d5e3;
+    background: linear-gradient( #78d5e3, #0b8a9e);
+    border: 1px solid #0b8a9e;
     border-radius: 5px;
     color: #c41f75;
-    text-shadow: 0px 1px 0 black;
+    text-shadow: 0px 1px 0 #0b8a9e;
     cursor: pointer;
 }
 
 .modal .restart:hover {
-    background: linear-gradient(#222, deeppink);
+    background: linear-gradient(#4b0b9e, deeppink);
 }
 
 .modal .message {
@@ -83,15 +83,27 @@ body {
 .game {
     transform-style: preserve-3d;
     perspective: 500px;
-    min-height: 100%;
-    height: 100%;
+    /*min-height: 100%;*/
+    /*height: 100%;*/
+    /*width: 50vw;*/
+    /*height: 50vw;*/
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw 10vw;
+    grid-template-rows: 10vw 10vw 10vw 10vw;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
 }
 
 .card {
-    float: left;
-    width: 25%;
-    height: 25%;
-    padding: 5px;
+
+    /*float: left;*/
+
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+
+    /*padding: 5px;*/
     text-align: center;
     display: block;
     perspective: 500px;
@@ -100,12 +112,12 @@ body {
     z-index: 50;
 }
 
-@media (max-width: 800px) {
-    .card {
-        width: 17%;
-        height: 17%;
-    }
-}
+/*@media (max-width: 800px) {*/
+/*    .card {*/
+/*        width: 17%;*/
+/*        height: 17%;*/
+/*    }*/
+/*}*/
 
 .card .inside {
     width: 100%;
@@ -114,11 +126,14 @@ body {
     transform-style: preserve-3d;
     transition: 0.4s ease-in-out;
     background: white;
+    border-radius: 20px;
 }
 
 .card .front,
 .card .back {
-    border: 1px solid turquoise;
+    /*border: none;*/
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 20px;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
     position: absolute;
@@ -126,7 +141,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 20px;
+
+    padding: 0px;
 }
 
 .card .front img,
@@ -135,21 +151,22 @@ body {
     display: block;
     margin: 0 auto;
     max-height: 100%;
+    border-radius: 20px;
 }
 
 .card .front {
     transform: rotateY(-180deg);
 }
 
-@media (max-width: 800px) {
-    .card .front {
-        padding: 5px;
-    }
+/*@media (max-width: 800px) {*/
+/*    .card .front {*/
+/*        padding: 5px;*/
+/*    }*/
 
-    .card .back {
-        padding: 10px;
-    }
-}
+/*    .card .back {*/
+/*        padding: 10px;*/
+/*    }*/
+/*}*/
 
 .card .inside.picked,
 .card .inside.matched {
