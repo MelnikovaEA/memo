@@ -139,7 +139,7 @@
                 frag += '<div class="card" data-id="' + v.id + '"><div class="inside">\
 			<div class="front"><img src="' + v.img + '"\
 			alt="' + v.name + '" /></div>\
-			<div class="back"><img src="img/back-img.jpg"\
+			<div class="back"><img src="img/backside.jpg"\
 			alt="Codepen" /></div></div>\
 			</div>';
             });

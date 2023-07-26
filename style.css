@@ -17,7 +17,7 @@ body {
 .wrap {
     position: relative;
     height: 100%;
-    min-height: 500px;
+    min-height: 100%;
 }
 
 .modal-overlay {
@@ -52,12 +52,6 @@ body {
     text-shadow: 0px 3px 0 mediumpurple;
 }
 
-@media (max-width: 480px) {
-    .modal .winner {
-        font-size: 60px;
-    }
-}
-
 .modal .restart {
     margin: 70px auto;
     padding: 20px 30px;
@@ -80,30 +74,79 @@ body {
     text-align: center;
 }
 
+@media (max-width: 870px) {
+    .modal {
+        min-height: 250px;
+    }
+
+    .modal .winner {
+        font-size: 60px;
+    }
+
+    .modal .restart {
+        margin: 50px auto;
+        padding: 20px 30px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 660px) {
+    .modal {
+        min-height: 250px;
+    }
+
+    .modal .winner {
+        font-size: 40px;
+    }
+
+    .modal .restart {
+        margin: 30px auto;
+        padding: 20px 30px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal {
+        height: 50%;
+        min-height: 50%;
+    }
+
+    .modal .winner {
+        font-size: 30px;
+    }
+
+    .modal .restart {
+        margin: 10px auto;
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+
+    @media (max-width: 320px) {
+        .modal .winner {
+            font-size: 20px;
+        }
+    }
+
+    }
+
 .game {
     transform-style: preserve-3d;
     perspective: 500px;
-    /*min-height: 100%;*/
-    /*height: 100%;*/
-    /*width: 50vw;*/
-    /*height: 50vw;*/
+    min-height: 100%;
+    height: 100%;
     display: grid;
-    grid-template-columns: 10vw 10vw 10vw 10vw;
-    grid-template-rows: 10vw 10vw 10vw 10vw;
-    gap: 10px;
+    grid-template-columns: 22vh 22vh 22vh 22vh;
+    grid-template-rows: 22vh 22vh 22vh 22vh;
+    gap: 2vh;
     justify-content: center;
-    padding: 20px;
+    padding: 3vh;
 }
 
 .card {
-
-    /*float: left;*/
-
     border-radius: 20px;
     width: 100%;
     height: 100%;
-
-    /*padding: 5px;*/
     text-align: center;
     display: block;
     perspective: 500px;
@@ -141,8 +184,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-
-    padding: 0px;
+    padding: 0;
 }
 
 .card .front img,
