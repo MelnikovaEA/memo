@@ -77,10 +77,13 @@ body {
 @media (max-width: 870px) {
     .modal {
         min-height: 250px;
+        padding: 45px 0;
     }
 
     .modal .winner {
         font-size: 60px;
+        margin-top: 0;
+
     }
 
     .modal .restart {
@@ -93,6 +96,7 @@ body {
 @media (max-width: 660px) {
     .modal {
         min-height: 250px;
+        padding: 20px 0;
     }
 
     .modal .winner {
@@ -106,11 +110,10 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
     .modal {
-        height: 30%;
-        min-height: 30%;
-        padding: 20px 10px;
+        height: 25%;
+        min-height: 25%;
     }
 
     .modal .winner {
@@ -124,11 +127,11 @@ body {
         font-size: 15px;
     }
 
-    @media (max-width: 320px) {
-        .modal .winner {
-            font-size: 20px;
-        }
-    }
+    /*@media (min-width: 320px) and (max-width: 480px) {*/
+    /*    .modal .winner {*/
+    /*        font-size: 15px;*/
+    /*    }*/
+    /*}*/
 }
 
     .game {
@@ -144,12 +147,12 @@ body {
         padding: 3vh;
     }
 
-    @media (max-width: 425px) {
+    @media (min-width: 320px) and (max-width: 480px) {
         .game {
             grid-template-columns: 22vw 22vw 22vw 22vw;
             grid-template-rows: 22vw 22vw 22vw 22vw 22vw 22vw ;
-            padding: 1vh;
-            gap: 1vh;
+            padding: 0.5vw;
+            gap: 0.5vw;
         }
     }
 
