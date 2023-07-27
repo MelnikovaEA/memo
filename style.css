@@ -50,7 +50,6 @@ body {
     text-align: center;
     color: #c41f75;
     text-shadow: 0px 3px 0 mediumpurple;
-    /*margin: 0;*/
 }
 
 .modal .restart {
@@ -147,8 +146,8 @@ body {
 
     @media (max-width: 425px) {
         .game {
-            grid-template-columns: 15.5vh 15.5vh 15.5vh 15.5vh;
-            grid-template-rows: 15.5vh 15.5vh 15.5vh 15.5vh 15.5vh 15.5vh;
+            grid-template-columns: 22vw 22vw 22vw 22vw;
+            grid-template-rows: 22vw 22vw 22vw 22vw 22vw 22vw ;
             padding: 1vh;
             gap: 1vh;
         }
