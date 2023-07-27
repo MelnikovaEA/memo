@@ -41,6 +41,26 @@
             img: "img/shark_up.png",
             id: 8,
         },
+        {
+            name: 'sheep',
+            img: "img/sheep_up.png",
+            id: 9,
+        },
+        {
+            name: 'polarbear',
+            img: "img/polarbear_up.png",
+            id: 10,
+        },
+        {
+            name: 'puppy',
+            img: "img/puppy_up.png",
+            id: 11,
+        },
+        {
+            name: 'caterpillar',
+            img: "img/caterpillar_up.png",
+            id: 12,
+        },
     ];
     
     let Memory = {
@@ -122,7 +142,7 @@
         },
 
         shuffle: function (array) {
-            var counter = array.length, temp, index;
+            let counter = array.length, temp, index;
             while (counter > 0) {
                 index = Math.floor(Math.random() * counter);
                 counter--;
@@ -139,8 +159,8 @@
                 frag += '<div class="card" data-id="' + v.id + '"><div class="inside">\
 			<div class="front"><img src="' + v.img + '"\
 			alt="' + v.name + '" /></div>\
-			<div class="back"><img src="img/backside.jpg"\
-			alt="Codepen" /></div></div>\
+			<div class="back"><img src="img/backside.png"\
+			alt="backside" /></div></div>\
 			</div>';
             });
             return frag

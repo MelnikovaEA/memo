@@ -58,7 +58,7 @@ body {
     display: block;
     font-size: 30px;
     background: #78d5e3;
-    background: linear-gradient( #78d5e3, #0b8a9e);
+    background: linear-gradient(#78d5e3, #0b8a9e);
     border: 1px solid #0b8a9e;
     border-radius: 5px;
     color: #c41f75;
@@ -108,8 +108,9 @@ body {
 
 @media (max-width: 480px) {
     .modal {
-        height: 50%;
-        min-height: 50%;
+        height: 30%;
+        min-height: 30%;
+        padding: 20px 10px;
     }
 
     .modal .winner {
@@ -127,21 +128,30 @@ body {
             font-size: 20px;
         }
     }
+}
 
+    .game {
+        transform-style: preserve-3d;
+        perspective: 500px;
+        min-height: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 22vh 22vh 22vh 22vh 22vh;
+        grid-template-rows: 22vh 22vh 22vh 22vh;
+        gap: 2vh;
+        justify-content: center;
+        padding: 3vh;
     }
 
-.game {
-    transform-style: preserve-3d;
-    perspective: 500px;
-    min-height: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 22vh 22vh 22vh 22vh;
-    grid-template-rows: 22vh 22vh 22vh 22vh;
-    gap: 2vh;
-    justify-content: center;
-    padding: 3vh;
-}
+    @media (max-width: 425px) {
+        .game {
+            grid-template-columns: 18vh 18vh 18vh 18vh;
+            grid-template-rows: 18vh 18vh 18vh 18vh 18vh;
+            padding: 1vh;
+
+        }
+    }
+
 
 .card {
     border-radius: 20px;
@@ -154,13 +164,6 @@ body {
     cursor: pointer;
     z-index: 50;
 }
-
-/*@media (max-width: 800px) {*/
-/*    .card {*/
-/*        width: 17%;*/
-/*        height: 17%;*/
-/*    }*/
-/*}*/
 
 .card .inside {
     width: 100%;
@@ -175,10 +178,10 @@ body {
 .card .front,
 .card .back {
     /*border: none;*/
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+    backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -196,19 +199,13 @@ body {
     border-radius: 20px;
 }
 
+.card .back img {
+    opacity: 0.7;
+}
+
 .card .front {
     transform: rotateY(-180deg);
 }
-
-/*@media (max-width: 800px) {*/
-/*    .card .front {*/
-/*        padding: 5px;*/
-/*    }*/
-
-/*    .card .back {*/
-/*        padding: 10px;*/
-/*    }*/
-/*}*/
 
 .card .inside.picked,
 .card .inside.matched {
